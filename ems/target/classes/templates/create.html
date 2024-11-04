@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Employee</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fa;
+            color: #333;
+<!--            display: flex;-->
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            color: #0056b3;
+            text-align: center;
+            margin-bottom: 3px;
+        }
+
+        form {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            margin-left:700px;
+            margin-top:50px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 10px 0;
+        }
+
+        td:first-child {
+            text-align: right;
+            padding-right: 15px;
+            color: #666;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #d1d9e0;
+            border-radius: 4px;
+            background-color: #f9fbfd;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #0056b3;
+            border: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #004494;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Create Employee</h1>
+    <form th:action="@{/create}" th:object="${employee}" method="post">
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" th:field="*{name}"/></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" th:field="*{email}"/></td>
+            </tr>
+            <tr>
+                <td>Phone:</td>
+                <td><input type="text" th:field="*{phone}"/></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td><input type="text" th:field="*{gender}"/></td>
+            </tr>
+            <tr>
+                <td>Salary:</td>
+                <td><input type="text" th:field="*{salary}"/></td>
+            </tr>
+            <tr>
+                <td>Role:</td>
+                <td><input type="text" th:field="*{role}"/></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Create"/></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

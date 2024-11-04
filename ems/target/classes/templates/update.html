@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Update Employee</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fa;
+            color: #333;
+<!--            display: flex;-->
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            color: #0056b3;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            margin-left:700px;
+            margin-top:50px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 10px;
+            vertical-align: middle;
+        }
+
+        td:first-child {
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #0056b3;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #004a99;
+        }
+    </style>
+</head>
+<body>
+    <h1>Update Employee</h1>
+    <form th:action="@{/update}" th:object="${employee}" method="post">
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" th:field="*{name}"/></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" th:field="*{email}"/></td>
+            </tr>
+            <tr>
+                <td>Phone:</td>
+                <td><input type="text" th:field="*{phone}"/></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td><input type="text" th:field="*{gender}"/></td>
+            </tr>
+            <tr>
+                <td>Salary:</td>
+                <td><input type="text" th:field="*{salary}"/></td>
+            </tr>
+            <tr>
+                <td>Role:</td>
+                <td><input type="text" th:field="*{role}"/></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Update"/></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

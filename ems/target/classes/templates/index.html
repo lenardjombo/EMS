@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Employee Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fa;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: #0056b3;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #0056b3;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #e0f7ff;
+        }
+
+        a {
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .create-btn {
+            display: inline-block;
+        }
+        </style>
+</head>
+<body>
+    <h1>Employee Management System</h1>
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Gender</th>
+            <th>Salary</th>
+            <th>Role</th>
+            <th>Actions</th>
+        </tr>
+        <tr th:each="employee : ${employees}">
+            <td th:text="${employee.id}">Id</td>
+            <td th:text="${employee.name}">Name</td>
+            <td th:text="${employee.email}">Email</td>
+            <td th:text="${employee.phone}">Phone</td>
+            <td th:text="${employee.gender}">Gender</td>
+            <td th:text="${employee.salary}">Salary</td>
+            <td th:text="${employee.role}">Role</td>
+            <td>
+                <a th:href="@{/update/{id}(id=${employee.id})}">Update</a>
+                <a th:href="@{/delete/{id}(id=${employee.id})}">Delete</a>
+            </td>
+        </tr>
+    </table>
+    <a th:href="@{/create}">Create New Employee</a>
+</body>
+</html>
