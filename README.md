@@ -2,11 +2,12 @@
 
 ## Screenshots
 
-<img src="https://github.com/user-attachments/assets/f59499a4-f774-4767-9a3b-07833711ca91" alt="Screenshot from 2024-11-04 18-12-49" width="600" height="400" />
 
-<img src="https://github.com/user-attachments/assets/c1919ac6-b7b5-44b7-a21e-0348543a4c08" alt="Screenshot from 2024-11-04 18-20-19" width="600" height="400" />
-
-<img src="https://github.com/user-attachments/assets/ad20c427-0e6f-43d1-8c86-48ef1f7606ac" alt="Screenshot from 2024-11-04 18-20-38" width="600" height="400" />
+<div style="display: flex; justify-content: space-around;">
+    <img src="https://github.com/user-attachments/assets/f59499a4-f774-4767-9a3b-07833711ca91" alt="Screenshot from 2024-11-04 18-12-49" width="600" height="400" />
+    <img src="https://github.com/user-attachments/assets/c1919ac6-b7b5-44b7-a21e-0348543a4c08" alt="Screenshot from 2024-11-04 18-20-19" width="600" height="400" />
+    <img src="https://github.com/user-attachments/assets/ad20c427-0e6f-43d1-8c86-48ef1f7606ac" alt="Screenshot from 2024-11-04 18-20-38" width="600" height="400" />
+</div>
 
 ## Overview
 
