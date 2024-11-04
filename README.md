@@ -21,7 +21,7 @@ The Employment Management System is a simple web-based application built using S
 ## Technologies Used
 
 - **Backend**: Spring Boot, Spring MVC, Spring Data JPA
-- **Database**: H2 Database (in-memory) or MySQL
+- **Database**: MySQL
 - **Frontend**: Html and CSS
 - **Build Tool**: Maven
 - **Version Control**: Git
