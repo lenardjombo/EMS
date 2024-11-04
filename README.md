@@ -40,7 +40,7 @@ To get a local copy of the project up and running, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/employment-management-system.git`
+   git clone https://github.com/lenardjombo/ems.git`
 
 2.**Build the Project**
   ```bash
